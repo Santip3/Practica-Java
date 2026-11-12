@@ -3,8 +3,9 @@ public class Main {
     public static void main(String[] args) {
         //Visible, sin crear objeto, no devuelve valor, argumentos desde comandos//
         Runnable[] ej = new Runnable[41];
+        //interfaz de java para acciones en forma de array donde cada posición guarda un ejercicio //
 
-        // PARTE I
+        // PARTE I con referencias para luego ser ejecutadas //
         ej[1] = ParteI::ejercicio1;   ej[2] = ParteI::ejercicio2;   ej[3] = ParteI::ejercicio3;
         ej[4] = ParteI::ejercicio4;   ej[5] = ParteI::ejercicio5;   ej[6] = ParteI::ejercicio6;
         ej[7] = ParteI::ejercicio7;   ej[8] = ParteI::ejercicio8;   ej[9] = ParteI::ejercicio9;
@@ -24,7 +25,7 @@ public class Main {
         ej[37] = ParteIV::ejercicio37; ej[38] = ParteIV::ejercicio38; ej[39] = ParteIV::ejercicio39;
         // PROBLEMA FINAL
         ej[40] = ProblemaFinal::ejecutar;
-        // Se pueden llamar al no ser static //
+        // Se pueden llamar porque no es static //
 
         mostrarMenu();
         try {
@@ -42,14 +43,14 @@ public class Main {
     }
 
     private static void mostrarMenu() {
-        System.out.println("=========== TALLER DE PRÁCTICA DE PROGRAMACIÓN ===========");
-        System.out.println(" PARTE I   (1-14)  : Entrada/salida, operaciones y funciones");
+        System.out.println("=========== TALLER DE PRÁCTICA DE PROGRAMACIÓN EN JAVA ===========");
+        System.out.println(" PARTE I   (1-14)  : Operaciones y funciones");
         System.out.println(" PARTE II  (15-24) : Condicionales");
         System.out.println(" PARTE III (25-30) : Textos");
         System.out.println(" PARTE IV  (31-39) : Ciclos y patrones");
-        System.out.println(" 40                : Problema final (equipaje BOEING 747)");
+        System.out.println(" 40                : Equipaje BOEING 747)");
         System.out.println(" 0 = salir");
-        System.out.println("==========================================================");
+        System.out.println("=========================================================="); // estético //
         // El ln hace que salte de línea //
     }
 }

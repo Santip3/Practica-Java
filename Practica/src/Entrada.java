@@ -9,6 +9,7 @@ public class Entrada {
             throw new IllegalStateException("Fin de la entrada de datos");
         }
         return sc.nextLine();
+        //Lee hasta el enter //
     }
 
     public static int entero(String mensaje) {
@@ -19,6 +20,7 @@ public class Entrada {
                 System.out.println("  Valor inválido, escribe un número entero.");
             }
         }
+        // texto a int //
     }
 
     public static int enteroEnRango(String mensaje, int min, int max) {
@@ -27,6 +29,7 @@ public class Entrada {
             if (n >= min && n <= max) return n;
             System.out.println("  El valor debe estar entre " + min + " y " + max + ".");
         }
+        // para limitar, dias o digitos//
     }
 
     public static double decimal(String mensaje) {
@@ -37,6 +40,7 @@ public class Entrada {
                 System.out.println("  Valor inválido, escribe un número (ej: 3.5).");
             }
         }
+        // permite la coma y la reemplaza por el punto//
     }
 
     public static double decimalEnRango(String mensaje, double min, double max) {
@@ -45,12 +49,13 @@ public class Entrada {
             if (n >= min && n <= max) return n;
             System.out.println("  El valor debe estar entre " + min + " y " + max + ".");
         }
+        // decimales en rango //
     }
 
-    /** Repite un texto n veces (equivalente a String.repeat, compatible con Java 8). */
     public static String repetir(String s, int n) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) sb.append(s);
         return sb.toString();
     }
+    // Repite un texto n veces //
 }
