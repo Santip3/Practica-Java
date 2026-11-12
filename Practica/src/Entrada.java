@@ -2,7 +2,7 @@ import java.util.Scanner;
 // Usa un solo Scanner para el programa //
 public class Entrada {
     private static final Scanner sc = new Scanner(System.in);
-
+    //System.in es lo que uno inserta //
     public static String texto(String mensaje) {
         System.out.print(mensaje);
         if (!sc.hasNextLine()) {
