@@ -2,11 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Problema final: control de equipaje de un BOEING 747.
- *
- * Suposiciones:
  *  - La tarifa por kilo depende del peso TOTAL del bulto:
- *      0 a 25 kg -> $0 | más de 25 hasta 300 kg -> $1.500/kg | más de 300 hasta 500 kg -> $2.500/kg
+ *   0 a 25 kg -> $0 | más de 25 hasta 300 kg -> $1.500/kg | más de 300 hasta 500 kg -> $2.500/kg
  *  - Un bulto se rechaza si pesa más de 500 kg o si, sumado a lo ya aceptado, supera 18.000 kg.
  *  - La tasa de cambio (pesos por dólar) la ingresa el usuario.
  */

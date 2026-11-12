@@ -3,7 +3,7 @@ public class ParteII {
     // 15. Par o impar
     public static void ejercicio15() {
         int n = Entrada.entero("Número entero: ");
-        System.out.println(n % 2 == 0 ? n + " es PAR" : n + " es IMPAR");
+        System.out.println(n % 2 == 0 ? n + " es PAR" : n + " es IMPAR"); // condición ? valor sicierto : valor si falso) //
     }
 
     // 16. Positivo o negativo
@@ -15,7 +15,7 @@ public class ParteII {
     }
 
     // 17. IVA con descuento del 5% si la venta supera 150.000 (usa calcularIVA)
-    //     Suposición: el descuento se aplica al precio bruto y luego se calcula el IVA.
+    // El descuento se aplica al precio bruto y luego se calcula el IVA. //
     public static void ejercicio17() {
         double bruto = Entrada.decimal("Precio bruto de la venta: ");
         System.out.printf("Precio bruto: %.2f%n", bruto);
@@ -81,8 +81,8 @@ public class ParteII {
 
     // 20. Validar usuario y contraseña
     public static void ejercicio20() {
-        final String USUARIO = "carlos";
-        final String CLAVE = "1234";
+        final String USUARIO = "estructuras";
+        final String CLAVE = "6767";
         String u = Entrada.texto("Usuario: ");
         String c = Entrada.texto("Contraseña: ");
         if (u.equals(USUARIO) && c.equals(CLAVE)) {
@@ -97,12 +97,12 @@ public class ParteII {
         String[] nombres = {"CERO", "UNO", "DOS", "TRES", "CUATRO", "CINCO",
                 "SEIS", "SIETE", "OCHO", "NUEVE", "DIEZ"};
         int n = Entrada.enteroEnRango("Número entre 0 y 10: ", 0, 10);
-        System.out.println(n + " ---> " + nombres[n]);
+        System.out.println(n + " ---> " + nombres[n]); // ahorro hacer los if por un array //
     }
 
     // 22. Cantidad de dígitos de un número menor a 100.000
     public static void ejercicio22() {
-        int n = Math.abs(Entrada.enteroEnRango("Número menor a 100000: ", -99999, 99999));
+        int n = Math.abs(Entrada.enteroEnRango("Número menor a 100000: ", -99999, 99999)); // math.abs quita el signo //
         int digitos;
         if (n < 10) digitos = 1;
         else if (n < 100) digitos = 2;

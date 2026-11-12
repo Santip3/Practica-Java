@@ -8,7 +8,7 @@ public class ParteIV {
     // 32. Primeros 10 naturales impares
     public static void ejercicio32() {
         for (int i = 1; i <= 10; i++) System.out.println(2 * i - 1);
-    }
+    } // otra manera de ir de dos en dos desde el uno //
 
     // 33. Primeros 10 naturales pares
     public static void ejercicio33() {
@@ -23,6 +23,7 @@ public class ParteIV {
             if (n <= 0) System.out.println("  Valor no permitido, intenta de nuevo.");
         } while (n <= 0);
         System.out.println("Número válido: " + n);
+        // ya el entrada.entero no deja que sean letras //
     }
 
     // 35. Decimal -> binario (división sucesiva entre 2)
@@ -39,6 +40,7 @@ public class ParteIV {
             temp /= 2;
         }
         System.out.println("Binario: " + binario);
+        // se divide entre 2, el residuo se guarda y se repite con el cociente hasta 0 //
     }
 
     // 36. Binario -> decimal
@@ -54,6 +56,7 @@ public class ParteIV {
             decimal = decimal * 2 + (bin.charAt(i) - '0');
         }
         System.out.println("Decimal: " + decimal);
+        // while hasta que cumpla matches, con el metodo de horner, y el bin convierte el caracter en el numero//
     }
 
     // 37. Patrón 1, 12, 123 ... hasta 12345678910
@@ -80,4 +83,5 @@ public class ParteIV {
             System.out.println(Entrada.repetir(" ", i) + Entrada.repetir("*", filas - i));
         }
     }
+    // para el 38 y 39, uso fila i //
 }

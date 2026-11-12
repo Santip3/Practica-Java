@@ -13,7 +13,7 @@ public class ParteI {
     // 2. "Hola" y tu nombre en la misma línea
     public static void ejercicio2() {
         String nombre = Entrada.texto("Escribe tu nombre: ");
-        System.out.print("Hola ");
+        System.out.print("Hola "); // hago que no sale de línea //
         System.out.println(nombre);
     }
 
@@ -41,18 +41,18 @@ public class ParteI {
             System.out.println("División: no se puede dividir por cero");
             System.out.println("Residuo: no se puede dividir por cero");
         } else {
-            System.out.println("División: " + (a / b));
-            System.out.println("Residuo: " + (a % b));
+            System.out.println("División: " + (a / b)); // descarta decimales //
+            System.out.println("Residuo: " + (a % b)); // se usa % para residuos //
         }
     }
 
-    // 6. Parte entera y parte decimal (se usa BigDecimal para no perder precisión)
+    // 6. Parte entera y parte decimal (se usa BigDecimal para no perder exactitud) //
     public static void ejercicio6() {
         String s = Entrada.texto("Número decimal: ").trim().replace(',', '.');
         try {
             BigDecimal numero = new BigDecimal(s);
-            BigInteger entera = numero.toBigInteger();
-            BigDecimal decimal = numero.subtract(new BigDecimal(entera)).abs();
+            BigInteger entera = numero.toBigInteger(); // corto decimales //
+            BigDecimal decimal = numero.subtract(new BigDecimal(entera)).abs(); // quita el signo //
             System.out.println("Parte entera: " + entera);
             System.out.println("Parte decimal: " + decimal.toPlainString());
         } catch (NumberFormatException e) {
@@ -65,7 +65,7 @@ public class ParteI {
         return n1 * 0.15 + n2 * 0.20 + n3 * 0.15 + n4 * 0.30 + n5 * 0.20;
     }
 
-    /** Lee las cinco notas (0.0 a 5.0). Se reutiliza en el ejercicio 18. */
+    // Lee las cinco notas (0.0 a 5.0). Se reutiliza en el ejercicio 18. //
     public static double[] leerCincoNotas() {
         double[] n = new double[5];
         for (int i = 0; i < 5; i++) {
@@ -77,7 +77,7 @@ public class ParteI {
     public static void ejercicio7() {
         double[] n = leerCincoNotas();
         double nota = calcularPromedio(n[0], n[1], n[2], n[3], n[4]);
-        System.out.printf("Nota final: %.2f%n", nota);
+        System.out.printf("Nota final: %.2f%n", nota); // %.2f = 2 decimales //
     }
 
     // 8. Función calcularIVA: recibe precio bruto y devuelve precio con IVA (19%)
@@ -123,7 +123,7 @@ public class ParteI {
         double y1 = Entrada.decimal("y1: ");
         double x2 = Entrada.decimal("x2: ");
         double y2 = Entrada.decimal("y2: ");
-        double d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        double d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)); // fórmula algebraica  //
         System.out.printf("Distancia: %.4f%n", d);
     }
 
@@ -144,6 +144,6 @@ public class ParteI {
         long h = total / 3600;
         long m = (total % 3600) / 60;
         long s = total % 60;
-        System.out.printf("%02d:%02d:%02d%n", h, m, s);
+        System.out.printf("%02d:%02d:%02d%n", h, m, s); // uso % para precision //
     }
 }

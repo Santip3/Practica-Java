@@ -6,7 +6,7 @@ public class ParteIII {
     public static String invertirTexto(String original) {
         return new StringBuilder(original).reverse().toString();
     }
-
+    // stringbuilder es manipulable por el metodo reverse y lo convierto de nuevo a string //
     public static void ejercicio25() {
         String t = Entrada.texto("Texto: ");
         System.out.println(invertirTexto(t));
@@ -27,6 +27,7 @@ public class ParteIII {
               .append(" ");
         }
         System.out.println(sb.toString().trim());
+        // trim quita espacios, split convierte en array, for-each recorre, se toma cada palabra y se pasa a mayúscula, se une //
     }
 
     // 27. Penúltima palabra
@@ -38,6 +39,7 @@ public class ParteIII {
         } else {
             System.out.println("Penúltima palabra: " + palabras[palabras.length - 2]);
         }
+        // última lengt - 1, penultima length - 2 //
     }
 
     // 28. ¿El segundo texto contiene al primero?
@@ -49,6 +51,7 @@ public class ParteIII {
         } else {
             System.out.println("NO, el segundo texto no contiene al primero.");
         }
+        // las mayusculas difieren //
     }
 
     // 29. Función esPalindromo (ignora mayúsculas, tildes, espacios y signos)
@@ -58,7 +61,10 @@ public class ParteIII {
                 .replaceAll("[^A-Za-z0-9]", "")
                 .toLowerCase();
         return new StringBuilder(limpia).reverse().toString().equals(limpia);
+        // normalizer separa letra acentuada y marca de tilde, replace all borra marcas, el segundo lo que no sea letra //
     }
+
+
 
     public static void ejercicio29() {
         String p = Entrada.texto("Palabra: ");
@@ -76,6 +82,7 @@ public class ParteIII {
             suma += x[i] * y[j] - x[j] * y[i];
         }
         return Math.abs(suma) / 2;
+        // coordenadas en arrays, para cada vertice i se toma el siguiente j, el % n cierra la figura, y se usa shoelace //
     }
 
     public static void ejercicio30() {

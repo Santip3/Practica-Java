@@ -9,7 +9,7 @@ public class Entrada {
             throw new IllegalStateException("Fin de la entrada de datos");
         }
         return sc.nextLine();
-        //Lee hasta el enter //
+        // Lee hasta el enter //
     }
 
     public static int entero(String mensaje) {

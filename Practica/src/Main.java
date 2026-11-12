@@ -37,9 +37,9 @@ public class Main {
                 ej[op].run();
             }
         } catch (IllegalStateException e) {
-            // Se acabó la entrada de datos (Ctrl+D / Ctrl+Z): salimos sin error.
+            // Se acabó la entrada de datos salgo sin error. //
         }
-        System.out.println("¡Hasta luego!");
+        System.out.println("¡Chao pescao!");
     }
 
     private static void mostrarMenu() {
