@@ -1,9 +1,7 @@
-/**
- * Menú principal: elige el número del ejercicio y se ejecuta.
- */
 public class Main {
 
     public static void main(String[] args) {
+        //Visible, sin crear objeto, no devuelve valor, argumentos desde comandos//
         Runnable[] ej = new Runnable[41];
 
         // PARTE I
@@ -26,6 +24,7 @@ public class Main {
         ej[37] = ParteIV::ejercicio37; ej[38] = ParteIV::ejercicio38; ej[39] = ParteIV::ejercicio39;
         // PROBLEMA FINAL
         ej[40] = ProblemaFinal::ejecutar;
+        // Se pueden llamar al no ser static //
 
         mostrarMenu();
         try {
@@ -51,5 +50,6 @@ public class Main {
         System.out.println(" 40                : Problema final (equipaje BOEING 747)");
         System.out.println(" 0 = salir");
         System.out.println("==========================================================");
+        // El ln hace que salte de línea //
     }
 }

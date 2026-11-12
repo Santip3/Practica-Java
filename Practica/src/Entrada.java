@@ -1,9 +1,5 @@
 import java.util.Scanner;
-
-/**
- * Utilidades para leer datos por consola.
- * Usa UN solo Scanner para todo el programa (evita errores al mezclar lecturas).
- */
+// Usa un solo Scanner para el programa //
 public class Entrada {
     private static final Scanner sc = new Scanner(System.in);
 
